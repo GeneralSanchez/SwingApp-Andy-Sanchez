@@ -13,9 +13,24 @@ public class Main
       frame1.setVisible(true);
       //----------Panel to hold the buttons--------
       JPanel panel1 = new JPanel(new GridLayout(2,2, 20,20));
+      //---------------Label 1--------------------
+      JLabel label1 = new JLabel("Count the ducks");
+      JTextField textfield1 = new JTextField(10);
 
+      //-----------------Button 1----------------
+      JButton button1 = new JButton ("Ranking Generator");
 
-
+      button1.addActionListener(new ActionListener()
+      {
+          public void actionPerformed (ActionEvent e)
+          {
+            String[] ranking = {"General","Lord","Emperor", "Captain","Commander","Liuetenent","Admiral","Master"};
+             String newText = ranking[(int)(Math.random() * ranking.length)];
+             label1.setText(newText);
+          }
+        });
+       panel1.add(button1);
+       panel1.add(label1);
 
 
 
