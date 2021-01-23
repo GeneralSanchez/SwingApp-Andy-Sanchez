@@ -15,7 +15,9 @@ public class Main
       JPanel panel1 = new JPanel(new GridLayout(2,2, 20,20));
       //---------------Label 1--------------------
       JLabel label1 = new JLabel("Lets see what you get");
-      JTextField textfield1 = new JTextField(10);
+      
+      JTextField textfield1 = new JTextField(5);
+      JTextField textfield2 = new JTextField(5);
 
       //-----------------Button 1----------------
       JButton button1 = new JButton ("Ranking Generator");
@@ -39,10 +41,22 @@ public class Main
           textfield1.setText("");
         }
       });
+      //----------------Button 3 -------------------
+      JButton button3 = new JButton ("Get some Text");
+      button3.addActionListener(new ActionListener()
+      {
+        public void actionPerformed(ActionEvent e)
+        {
+          System.out.println(textfield2.getText());
+          textfield2.setText("");
+        }
+      });
        panel1.add(button1);
        panel1.add(button2);
        panel1.add(label1);
        panel1.add(textfield1);
+       panel1.add(button3);
+       panel1.add(textfield2);
 
 
 
