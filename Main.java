@@ -14,7 +14,7 @@ public class Main
       //----------Panel to hold the buttons--------
       JPanel panel1 = new JPanel(new GridLayout(2,2, 20,20));
       //---------------Label 1--------------------
-      JLabel label1 = new JLabel("Count the ducks");
+      JLabel label1 = new JLabel("Lets see what you get");
       JTextField textfield1 = new JTextField(10);
 
       //-----------------Button 1----------------
@@ -29,8 +29,20 @@ public class Main
              label1.setText(newText);
           }
         });
+        //----------------Button 2 -------------------
+      JButton button2 = new JButton ("Get some Text");
+      button2.addActionListener(new ActionListener()
+      {
+        public void actionPerformed(ActionEvent e)
+        {
+          System.out.println(textfield1.getText());
+          textfield1.setText("");
+        }
+      });
        panel1.add(button1);
+       panel1.add(button2);
        panel1.add(label1);
+       panel1.add(textfield1);
 
 
 
