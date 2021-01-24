@@ -9,15 +9,17 @@ public class Main
     JFrame frame1 = new JFrame ("Star Wars: GET CHARACTER NAME");
     frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       //YOU MUST HAVE THIS LINE
-      frame1.setSize(500,500);
+      frame1.setSize(600,600);
       frame1.setVisible(true);
       //----------Panel to hold the buttons--------
-      JPanel panel1 = new JPanel(new GridLayout(2,2, 20,20));
+      JPanel panel1 = new JPanel(new GridLayout(3,3, 30,30));
       //---------------Label 1--------------------
       JLabel label1 = new JLabel("Lets see what you get");
       
-      JTextField textfield1 = new JTextField(5);
-      JTextField textfield2 = new JTextField(5);
+      JTextField textfield1 = new JTextField(10);
+      //---------------Label 2--------------------
+      JLabel label2 = new JLabel("Count the ducks");
+      JTextField textfield2 = new JTextField(10);
 
       //-----------------Button 1----------------
       JButton button1 = new JButton ("Ranking Generator");
@@ -32,7 +34,7 @@ public class Main
           }
         });
         //----------------Button 2 -------------------
-      JButton button2 = new JButton ("Get some Text");
+      JButton button2 = new JButton ("Enter Your Last Name");
       button2.addActionListener(new ActionListener()
       {
         public void actionPerformed(ActionEvent e)
@@ -57,6 +59,7 @@ public class Main
        panel1.add(textfield1);
        panel1.add(button3);
        panel1.add(textfield2);
+       panel1.add(label2);
 
 
 
