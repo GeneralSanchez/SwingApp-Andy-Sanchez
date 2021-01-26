@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.event.*; //this enables the events
 import java.awt.*;
+import java.util.*;
 
 public class Main
 {
@@ -28,7 +29,16 @@ public class Main
       {
           public void actionPerformed (ActionEvent e)
           {
-            String[] ranking = {"General","Lord","Emperor", "Captain","Commander","Liuetenent","Admiral","Master"};
+            ArrayList <String> ranking = new ArrayList <String>();
+            ranking.add ("General");
+            ranking.add ("Lord");
+            ranking.add ("Emperor");
+            ranking.add ("Captain");
+            ranking.add ("Commander");
+            ranking.add ("Admiral");
+            ranking.add ("Liuetenent");
+            ranking.add ("Master");
+            //String[] ranking = {"General","Lord","Emperor", "Captain","Commander","Liuetenent","Admiral","Master"};
              String newText = ranking[(int)(Math.random() * ranking.length)];
              label1.setText(newText);
              System.out.print ("Hello welcome Star Wars fans please fill out infomation to get your name.");
@@ -73,8 +83,9 @@ public class Main
         }
       });
        panel1.add(button1);
-       panel1.add(button2);
+       
        panel1.add(label1);
+       panel1.add(button2);
        panel1.add(textfield1);
        panel1.add(button3);
        panel1.add(textfield2);
