@@ -38,8 +38,7 @@ public class Main
             ranking.add ("Admiral");
             ranking.add ("Liuetenent");
             ranking.add ("Master");
-            //String[] ranking = {"General","Lord","Emperor", "Captain","Commander","Liuetenent","Admiral","Master"};
-             String newText = ranking[(int)(Math.random() * ranking.length)];
+             String newText = ranking.get((int)(Math.random() * ranking.size()));
              label1.setText(newText);
              System.out.print ("Hello welcome Star Wars fans please fill out infomation to get your name.");
              System.out.print("Your name is  "+newText);
