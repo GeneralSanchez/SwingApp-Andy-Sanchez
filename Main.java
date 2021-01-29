@@ -8,6 +8,7 @@ public class Main
   public static void main (String args[])
   {
     System.out.println ("Andy Sanchez,Swing App");
+    
     JFrame frame1 = new JFrame ("Star Wars: GET CHARACTER NAME");//this  chnges frame name of the top
     frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//for the frame
       //YOU MUST HAVE THIS LINE
@@ -111,5 +112,5 @@ public class Main
 
       frame1.getContentPane().add(BorderLayout.NORTH, panel1);//gets frame
       frame1.getContentPane().add(BorderLayout.CENTER, panel2);//gets fram
-  }
-}
+  }//
+}//end of main method
